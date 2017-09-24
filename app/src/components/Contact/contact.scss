@@ -1,0 +1,64 @@
+/*
+ * Import
+ */
+@import 'app/styles/color.scss';
+
+
+/*
+ * ID
+ */
+#contact {
+  &-img {
+    img {
+      width: 100%;
+    }
+  }
+}
+
+
+/*
+ * ClassName
+ */
+
+
+/*
+ * Media Queries
+ */
+@media all and (min-width: 960px) {}
+
+@media all and (min-width: 768px) {
+  #contact {
+    display: flex;
+    height: 100%;
+    opacity: 1;
+    width: 100%;
+    &-img {
+      max-height: 700px;
+      max-width: 450px;
+      img {
+        border-radius: 5px;
+        box-shadow: 0 0 5px #BBB;
+        width: 100%;
+      }
+    }
+  }
+
+  .contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
+    // padding: 0 2em;
+    position: relative;
+    width: 45%;
+    &-bloc {
+      padding: 1em 0;
+      &-title {
+        color: $primaryTitleColor;
+        font-size: 1em;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+      }
+    }
+  }
+}

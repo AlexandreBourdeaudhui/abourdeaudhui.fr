@@ -1,0 +1,47 @@
+/*
+ * Import
+ */
+@import 'app/styles/color.scss';
+
+
+/*
+ * ID
+ */
+#footer-container-social {
+  text-align: center;
+  padding-top: 2em;
+}
+
+
+/*
+ * ClassName
+ */
+.footer-social-items {
+  padding: 0 2em;
+  &-image {
+    height: 24px;
+    width: 24px;
+  }
+}
+
+
+/*
+ * Media Queries
+ */
+@media all and (max-width: 300px) {
+  .footer-social-items {
+    padding: 0;
+    padding: 0 1em;
+  }
+}
+
+@media all and (min-width: 768px) {
+  #footer-container-social {
+    padding: 0;
+  }
+
+  .footer-social-items {
+    padding: 0;
+    padding-left: 4em;;
+  }
+}

@@ -1,0 +1,49 @@
+/*
+ * Import
+ */
+@import 'app/styles/color.scss';
+
+
+/*
+ * ID
+ */
+#footer-container-links {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+
+/*
+ * ClassName
+ */
+.footer-links-item {
+  color: $primaryTextColor;
+  line-height: 1.5;
+  padding: 0.25em 0;
+}
+
+
+/*
+ * Media Queries
+ */
+@media all and (min-width: 600px) {
+  #footer-container-links {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .footer-links-item {
+    color: $primaryTextColor;
+    &::after {
+      content: '•';
+      padding: 0 1em;
+    }
+    &:last-child {
+      &::after {
+        content: '';
+        padding: 0;
+      }
+    }
+  }
+}

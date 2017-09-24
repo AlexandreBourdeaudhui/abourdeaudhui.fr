@@ -1,0 +1,71 @@
+/*
+ * Import
+ */
+@import 'app/styles/color.scss';
+
+
+/*
+ * ID
+ */
+#competences {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+
+/*
+ * ClassNames
+ */
+.competences {
+  padding: 2em 0 5em;
+  max-width: 100%;
+
+  // Illustration
+  &-illustration {
+    display: block;
+    max-height: 100px;
+    max-width: 100px;
+    margin: 0 auto;
+  }
+
+  // Title
+  &-title {
+    color: $primaryTitleColor;
+    font-size: 1em;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+
+  // Desc
+  &-desc {
+    min-height: 126px;
+    text-align: justify;
+  }
+
+  // Tag
+  &-tag {
+    background: $primaryBackgroundColor;
+    border-radius: 5px;
+    color: $primaryTextColor;
+    display: inline-block;
+    font-size: 0.75em;
+    margin-right: 0.5em;
+    margin-bottom: 0.5em;
+    padding: 0.5em 1em;
+  }
+}
+
+
+/*
+ * Media Queries
+ */
+@media all and (min-width: 800px) {
+  .competences {
+    width: 47.5%;
+    // padding: 1em 5em 1em 0;
+    &:nth-child(even) {
+      // padding: 1em 1em 1em 0;
+    }
+  }
+}

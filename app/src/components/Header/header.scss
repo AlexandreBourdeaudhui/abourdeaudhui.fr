@@ -1,0 +1,298 @@
+/*
+ * Import
+ */
+@import 'app/styles/color.scss';
+
+
+/*
+ * ID
+ */
+#header {
+  background: $primaryBackgroundColor;
+  border-bottom: 1px solid #e4e4e4;
+  color: $primaryTextColor;
+  display: flex;
+  font-family: 'Open Sans', sans-serif;
+  justify-content: flex-end;
+  height: 50px;
+
+  // Button Menu
+  &-btn {
+    border-radius: 50%;
+    height: 50px;
+    position: relative;
+    transition: transform .6s;
+    width: 50px;
+    z-index: 10;
+    // Hover
+    &:hover {
+      span::before {
+        transform: translateY(-8px);
+      }
+      span::after {
+        transform: translateY(8px);
+      }
+    }
+
+    // Line
+    span,
+    span::before,
+    span::after {
+      background: $primaryTextColor;
+      display: block;
+      height: 2px;
+      position: absolute;
+      transition: .3s linear;
+      width: 20px;
+    }
+
+    span {
+      left: 50%;
+      top: 50%;
+      transform: translateX(-50%) translateY(-50%);
+      &::before,
+      &::after {
+        content: '';
+        top: 0;
+        transform: translateY(-6px);
+      }
+      &::after {
+        transform: translateY(6px);
+      }
+    }
+  }
+
+  // Nav
+  &-nav {
+    display: flex;
+    justify-content: center;
+    &-link {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    // Logo
+    &-me {
+      justify-content: center;
+      color: $primaryTextColor;
+      display: none;
+      flex-direction: column;
+      flex-wrap: wrap;
+      &-name {
+        font-size: 0.8em;
+        margin: 0;
+      }
+      &-dev {
+        font-size: 0.7em;
+        margin: 0;
+      }
+    }
+  }
+}
+
+
+/*
+ * ClassNames
+ */
+.nav-menu-items {
+  display: none;
+}
+
+// IF MENU IS OPEN
+.nav-menu--open > #header {
+  // BTN
+  &-btn {
+    position: fixed;
+    transform: rotate(180deg);
+    span {
+      background: none;
+    }
+    span::before {
+      background: $primaryTextColor;
+      transform: translateY(0) rotate(45deg);
+
+    }
+    span::after {
+      background: $primaryTextColor;
+      transform: translateY(0) rotate(-45deg);
+    }
+  }
+
+  // Nav
+  &-nav {
+    background: $primaryBackgroundColor;
+    height: 100%;
+    position: fixed;
+    width: 100%;
+    z-index: 9;
+
+    // Links
+    & .nav-menu-items {
+      display: flex;
+      justify-content: center;
+      padding-bottom: 1em;
+      text-decoration: none;
+
+      span {
+        color: $primaryTextColor;
+        font-size: 1.5em;
+        font-weight: 500;
+        line-height: 2;
+        position: relative;
+        text-transform: uppercase;
+        &::after {
+          border-bottom: 1px solid $primaryTextColor;
+          content: '';
+          display: block;
+          left: 50%;
+          position: absolute;
+          width: 0%;
+        }
+        &:hover::after {
+          animation: underline .5s both;
+        }
+      }
+
+      // Link Active
+      &--active {
+        span {
+          border-bottom: 3px solid $primaryTextColor;
+        }
+      }
+    }
+  }
+}
+
+
+/*
+ * Media Queries
+ */
+@media all and (min-width: 600px) {
+  /*
+   * ID
+   */
+  #header {
+    height: 100px;
+    &-btn {
+      display: none;
+    }
+    &-nav {
+      display: flex;
+      justify-content: space-between;
+      margin: 0 auto;
+      width: 1260px;
+
+      // Link ( container )
+      &-link {
+        align-self: center;
+        display: flex;
+        justify-content: flex-end;
+        flex-direction: row;
+      }
+
+      // Me
+      &-me {
+        display: flex;
+        margin-left: 0.5em;
+      }
+    }
+  }
+
+  /*
+   * ClassName
+   */
+  .nav-menu {
+    // Links
+    &-items {
+      border: none;
+      color: $primaryTextColor;
+      display: flex;
+      flex-wrap: nowrap;
+      font-size: 0.75em;
+      font-weight: 500;
+      padding-left: 1em;
+      text-decoration: none;
+      text-transform: uppercase;
+      &:last-child {
+        margin-right: 1em;
+      }
+      span {
+        position: relative;
+        &::after {
+          border-bottom: 1px solid $primaryTextColor;
+          content: '';
+          display: block;
+          left: 50%;
+          position: absolute;
+          width: 0%;
+        }
+        &:hover::after {
+          animation: underline .5s both;
+        }
+      }
+
+      // Active
+      &--active {
+        span {
+          border-bottom: 1px solid $primaryTextColor;
+        }
+      }
+    }
+  }
+}
+
+@media all and (min-width: 700px) {
+  // Me
+  #header-nav-me {
+    display: flex;
+    margin-left: 0.5em;
+    &-name {
+      font-size: 1em;
+    }
+    &-dev {
+      font-size: 0.75em;
+    }
+  }
+}
+
+@media all and (min-width: 800px) {
+  .nav-menu-items {
+    font-size: 0.80em;
+    padding-left: 1.5em;
+  }
+  #header-nav-me {
+    &-name {
+      font-size: 1.2em;
+    }
+  }
+}
+
+@media all and (min-width: 1000px) {
+  .nav-menu-items {
+    font-size: 0.85em;
+    padding-left: 2em;
+  }
+}
+
+@media all and (min-width: 1260px) {
+  .nav-menu-items {
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+
+/*
+ * Keyframes
+ */
+@keyframes underline {
+  0% {
+    width: 0%;
+  }
+
+  100% {
+    left: 0;
+    width: 100%;
+  }
+}

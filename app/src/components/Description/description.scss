@@ -1,0 +1,47 @@
+/*
+ * Import
+ */
+@import 'app/styles/color.scss';
+
+
+/*
+ * ClassNames
+ */
+.description {
+  padding-right: 1em;
+  text-align: right;
+  strong {
+    font-weight: 600;
+  }
+
+  // Title
+  &-title {
+    color: $primaryTitleColor;
+    font-size: 1em;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 0;
+  }
+
+  // Description
+  &-text {
+    font-size: 1em;
+    line-height: 1.5;
+    margin-top: 0;
+    margin-bottom: 2em;
+    text-align: justify;
+    &::first-letter {
+      font-size: 1.5em;
+    }
+  }
+}
+
+
+/*
+ * Media Queries
+ */
+@media all and (min-width: 960) {
+  .description {
+    padding: 1em 0;
+  }
+}

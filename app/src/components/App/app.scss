@@ -1,0 +1,94 @@
+/*
+ * Import
+ */
+@import 'app/styles/color.scss';
+
+
+
+/*
+ * ID
+ */
+#app {
+  min-height: 100vh;
+  background: rgba(#f1f1f1, .75);
+  position: relative;
+  &-container {
+    max-width: 1260px;
+    min-height: calc(100vh - 239px);
+    margin: 0 auto;
+    padding: 1em;
+
+
+    // LINKS IN APP
+    a {
+      // Default
+      &:link {
+        color: $primaryTitleColor;
+      }
+      // Visited
+      &:visited {
+        color: $defaultTextColor;
+      }
+    }
+  }
+}
+
+#return-top {
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  background: rgba(0, 0, 0, .25);
+  bottom: 0;
+  cursor: pointer;
+  display: none;
+  padding: 0.5em;
+  position: fixed;
+  right: 0.75em;
+  z-index: 6;
+  &::before {
+    background: url("/images/rocket.png");
+    background-size: contain;
+    content: '';
+    display: block;
+    height: 25px;
+    transform: rotate(317deg);
+    width: 25px;
+  }
+  &:hover {
+    background: rgba(#FFF, .5);
+  }
+}
+
+
+/*
+ * ClassNames
+ */
+
+// Fade enter === transition react router
+.fade-enter {
+  opacity: 0;
+  z-index: 1;
+}
+
+.fade-enter.fade-enter-active {
+  opacity: 1;
+  transition: opacity 250ms ease-in;
+}
+
+
+/*
+ * Media Queries
+ */
+@media all and (min-width: 600px) {
+  #app-container {
+    min-height: calc(100vh - 238px);
+  }
+}
+
+@media all and (min-width: 768px) {
+  #app-container {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    min-height: calc(100vh - 186px);
+  }
+}

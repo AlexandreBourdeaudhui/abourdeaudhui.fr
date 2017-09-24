@@ -1,0 +1,54 @@
+/*
+ * Import
+ */
+@import 'app/styles/color.scss';
+
+
+/*
+ * ID
+ */
+#write-me {
+  display: flex;
+  flex-direction: column;
+}
+
+
+/*
+ * ClassName
+ */
+.write-item {
+  line-height: 1.5;
+  &-puce {
+    display: inline-block;
+    height: 10px;
+    margin-right: 1em;
+    position: relative;
+    transition: all .3s ease;
+    width: 10px;
+    &::before,
+    &::after {
+      background: $defaultTextColor;
+      bottom: 0;
+      content: '';
+      display: block;
+      left: 0;
+      height: 1px;
+      margin: auto;
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 5px;
+    }
+
+    &::before {
+      transform: translate3d(0, 1px, 0) rotate(-45deg);
+    }
+    &::after {
+      transform: translate3d(0, -2px, 0) rotate(45deg);
+    }
+  }
+
+  &:hover .write-item-puce {
+    animation: pimpMyLink .9s infinite;
+  }
+}

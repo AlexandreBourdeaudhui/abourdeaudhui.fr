@@ -1,0 +1,54 @@
+/*
+ * Import
+ */
+@import 'app/styles/color.scss';
+
+
+/*
+ * ID
+ */
+#sitemap {
+  align-self: flex-start;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  &-title {
+    color: $primaryTitleColor;
+    font-size: 1em;
+    letter-spacing: 1px;
+    margin-bottom: 0;
+    text-transform: uppercase;
+  }
+
+  &-desc {
+    margin-top: 0;
+    &::first-letter {
+      font-size: 1.5em;
+    }
+  }
+
+  &-container {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+
+/*
+ * ClassName
+ */
+
+.sitemap-link {
+  &::before {
+    color: $primaryTitleColor;
+    content: '*';
+    display: inline-block;
+    font-size: 1.25em;
+    padding: 1em;
+    text-decoration: none;
+  }
+
+  &-sub {
+    padding-left: 3em;
+  }
+}

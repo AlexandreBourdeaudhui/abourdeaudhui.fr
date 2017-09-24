@@ -1,0 +1,208 @@
+/*
+ * Import
+ */
+@import 'app/styles/color.scss';
+
+
+/*
+ * ID
+ */
+#form {
+  display: flex;
+  flex-direction: column;
+  padding: 1em 0;
+  // Desc
+  &-desc {
+    font-style: italic;
+    margin-top: 0;
+    margin-bottom: 2em;
+  }
+
+  // Champs
+  &-field {
+    display: flex;
+    flex-direction: column;
+    .form-field {
+      width: 100%;
+    }
+  }
+
+
+  // Button
+  &-submit {
+    background: none;
+    background: $secondBackgroundColor;
+    border: none;
+    border-bottom: 3px solid $primaryBackgroundColor;
+    border-radius: 5px;
+    color: $primaryTextColor;
+    display: block;
+    margin: 1em auto;
+    transition: all .4s ease-out;
+    padding: 0.5em 1em;
+
+    &:hover {
+      background: $primaryBackgroundColor;
+    }
+  }
+}
+
+
+/*
+ * ClassName
+ */
+// FORM
+.form-field {
+  margin: 0.5em 0;
+  position: relative;
+
+  // INPUT + AREA
+  input[name='name'],
+  input[name='email'],
+  input[name='phone'],
+  input[name='object'],
+  textarea[name='message'] {
+    background: none;
+    border: none;
+    border-bottom: 1px solid $thirdBackgroundColor;
+    color: $primaryBackgroundColor;
+    font-family: 'Open Sans', sans-serif;
+    height: 3em;
+    padding: 0 0.5em;
+    width: 100%;
+    &:focus {
+      border-bottom: 1px solid $focusInput;
+      outline: none;
+      + label[for='name'],
+      + label[for='email'],
+      + label[for='phone'],
+      + label[for='object'],
+      + label[for='message'] {
+        color: $focusInput;
+      }
+    }
+    &::placeholder {
+      color: $thirdBackgroundColor;
+    }
+  }
+
+  textarea[name='message'] {
+    height: 6em;
+    padding: 0.75em;
+    resize: vertical;
+  }
+
+  // LABEL
+  label[for='name'],
+  label[for='email'],
+  label[for='phone'],
+  label[for='object'],
+  label[for='message'] {
+    display: none;
+    font-size: 0.75em;
+    left: 0.75em;
+    position: absolute;
+    text-transform: uppercase;
+    top: 0.50em;
+  }
+
+
+  /*
+   * Modifiers
+   */
+  &--has-value {
+    input[name='name'],
+    input[name='email'],
+    input[name='phone'],
+    input[name='object'] {
+      padding-top: 1em;
+    }
+
+    textarea[name='message'] {
+      padding-top: 1.25em;
+    }
+
+    label[for='name'],
+    label[for='email'],
+    label[for='phone'],
+    label[for='object'],
+    label[for='message'] {
+      animation: placeholderFadeIn .4s;
+      color: $primaryBackgroundColor;
+      display: block;
+    }
+  }
+
+  &--has-error {
+    input[name='name'],
+    input[name='email'],
+    input[name='phone'],
+    input[name='object'] {
+      border-bottom: 1px solid $errorColor;
+      padding-top: 1em;
+    }
+
+    textarea[name='message'] {
+      border-bottom: 1px solid $errorColor;
+      padding-top: 1.25em;
+    }
+
+    label[for='name'],
+    label[for='email'],
+    label[for='phone'],
+    label[for='object'],
+    label[for='message'] {
+      animation: placeholderFadeIn .4s;
+      color: $errorColor;
+      display: block;
+    }
+  }
+}
+
+/*
+ * Media Queries
+ */
+@media all and (min-width: 960px) {
+  #form-field {
+    flex-wrap: wrap;
+    flex-direction: row;
+    .form-field {
+      width: 49%;
+      &:nth-child(1),
+      &:nth-child(3) {
+        padding-right: 2%;
+      }
+    }
+  }
+}
+@media all and (min-width: 768px) {
+  .form--is-open {
+    transition: opacity 2s;
+    #form {
+      animation: formFadeIn 1s;
+      position: absolute;
+      width: 100%;
+    }
+    #contact-img img {
+      opacity: 0;
+    }
+  }
+}
+
+
+/*
+ * Keyframes
+ */
+@keyframes placeholderFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(1em);
+  }
+}
+
+@keyframes formFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(17em);
+  }
+}

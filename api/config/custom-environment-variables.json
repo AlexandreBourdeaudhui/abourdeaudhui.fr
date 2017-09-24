@@ -1,0 +1,10 @@
+{
+  "Server": {
+    "port": "PORT"
+  },
+  "Nodemailer": {
+    "service": "NODEMAILER_SERVICE",
+    "user": "NODEMAILER_USER",
+    "pass": "NODEMAILER_PASS"
+  }
+}

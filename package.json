@@ -1,0 +1,68 @@
+{
+  "name": "site-web-alexandre-bourdeaudhui",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AlexandreBourdeaudhui"
+  },
+  "author": "Alexandre Bourdeaud'hui <Alexandre.Bourdeaudhui@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "front": "brunch w -s",
+    "start": "brunch watch & nodemon api/index.js --exec babel-node",
+    "build": "brunch build --production",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix"
+  },
+  "dependencies": {
+    "axios": "^0.16.2",
+    "babel-polyfill": "^6.23.0",
+    "body-parser": "^1.17.2",
+    "classnames": "^2.2.5",
+    "config": "^1.26.2",
+    "cors": "^2.8.4",
+    "express": "^4.15.3",
+    "nodemailer": "^4.0.1",
+    "path": "^0.12.7",
+    "prop-types": "^15.5.10",
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1",
+    "react-redux": "^5.0.5",
+    "react-responsive-carousel": "^3.1.24",
+    "react-router-dom": "^4.1.1",
+    "react-scroll": "^1.5.4",
+    "react-transition-group": "^2.2.0",
+    "redux": "^3.7.2",
+    "sanitize-html": "^1.14.1",
+    "validate-email": "^1.0.0"
+  },
+  "devDependencies": {
+    "auto-reload-brunch": "^2.7.1",
+    "autoprefixer": "^6.7.7",
+    "babel-brunch": "https://github.com/webdif/babel-brunch",
+    "babel-cli": "^6.26.0",
+    "babel-eslint": "^7.2.3",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-plugin-transform-object-rest-spread": "^6.23.0",
+    "babel-preset-env": "^1.6.0",
+    "babel-preset-react": "^6.24.1",
+    "babel-register": "^6.24.1",
+    "babel-resolver": "^1.1.0",
+    "brunch": "^2.10.9",
+    "eslint": "^4.4.1",
+    "eslint-config-airbnb": "^15.1.0",
+    "eslint-import-resolver-node": "^0.3.0",
+    "eslint-plugin-import": "^2.3.0",
+    "eslint-plugin-jsx-a11y": "^5.0.3",
+    "eslint-plugin-react": "^7.1.0",
+    "postcss-brunch": "~0.5.0",
+    "sass-brunch": "^2.10.4",
+    "uglify-js-brunch": "^2.10.0"
+  },
+  "keywords": [
+    "Alexandre",
+    "Bourdeaudhui"
+  ],
+  "description": ""
+}

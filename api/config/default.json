@@ -1,0 +1,10 @@
+{
+  "Server": {
+    "port": 1234
+  },
+  "Nodemailer": {
+    "service": "gmail",
+    "user": "abc123",
+    "pass": "azerty"
+  }
+}

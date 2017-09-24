@@ -1,0 +1,79 @@
+/*
+ * Import
+ */
+@import 'app/styles/color.scss';
+
+
+/*
+ * ID
+ */
+#home {
+  &-container {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  // CV
+  &-cv {
+    display: flex;
+    justify-content: center;
+    padding: 1em 0;
+    &::before {
+      background: url('/images/pdf.svg') no-repeat center center;
+      content: '';
+      height: 50px;
+      width: 50px;
+    }
+
+    &-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 0 .5em;
+      span {
+        font-size: 0.725em;
+        text-align: center;
+        text-transform: uppercase;
+      }
+    }
+  }
+}
+
+
+/*
+ * ClassNames
+ */
+.home {
+  padding: 2em 0;
+  width: 100%;
+
+  &-photo {
+    border-radius: 2px;
+    box-shadow: 0 0 5px #EEE;
+    height: 100%;
+    object-fit: cover;
+    object-position: 50% 0%;
+    width: 100%;
+  }
+}
+
+
+/*
+ * Media Queries
+ */
+@media all and (min-width: 768px) {
+  #home-container {
+    flex-direction: row;
+  }
+
+  .home {
+    margin: 0 auto;
+    position: relative;
+    width: 47.5%; // 45%
+    &-photo {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+}
