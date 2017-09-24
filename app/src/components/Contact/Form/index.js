@@ -84,9 +84,9 @@ const Form = ({ actions, message, error }) => {
 
       <div className={
         classNames('form-field',
-        { 'form-field--has-value': message },
-        { 'form-field--has-error': error },
-      )}
+          { 'form-field--has-value': message },
+          { 'form-field--has-error': error },
+        )}
       >
         <textarea
           // HTML

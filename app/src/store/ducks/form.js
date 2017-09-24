@@ -26,8 +26,6 @@ const initialState = {
  */
 export default (state = initialState, action = {}) => {
   switch (action.type) {
-
-
     /*
      * Handle Input Change
      */

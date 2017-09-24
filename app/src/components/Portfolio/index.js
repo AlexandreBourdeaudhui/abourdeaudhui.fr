@@ -40,7 +40,7 @@ class Portfolio extends Component {
     const { isFetching, projectsIds } = this.props;
 
 
-  /*
+    /*
    * View
    */
 

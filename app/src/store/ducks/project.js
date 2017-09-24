@@ -27,8 +27,6 @@ const initialState = {
  */
 export default (state = initialState, action = {}) => {
   switch (action.type) {
-
-
     /*
      * Add One project in state
      */

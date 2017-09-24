@@ -75,8 +75,8 @@ const createMiddleware = store => next => (action) => {
           .then(({ data }) => {
             console.log(data);
           })
-          .catch((errors) => {
-            console.log(errors);
+          .catch(({ response }) => {
+            console.log(response.data.error);
           });
       }
       break;

@@ -22,7 +22,7 @@ const Information = () => (
 
     <p className="information-items">
     + 33 (0)6 13 50 19 01
-  </p>
+    </p>
 
 
   </div>

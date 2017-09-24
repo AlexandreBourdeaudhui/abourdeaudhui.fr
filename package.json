@@ -13,7 +13,7 @@
     "start": "brunch watch & nodemon api/index.js --exec babel-node",
     "build": "brunch build --production",
     "lint": "eslint .",
-    "lint:fix": "eslint . --fix"
+    "lint:fix": "eslint --fix app api"
   },
   "dependencies": {
     "axios": "^0.16.2",
