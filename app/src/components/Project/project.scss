@@ -72,6 +72,8 @@
 
     // Visite this Project !
     &-visite {
+      display: flex;
+      justify-content: space-around;
       font-size: 0.65em;
       text-transform: uppercase;
     }

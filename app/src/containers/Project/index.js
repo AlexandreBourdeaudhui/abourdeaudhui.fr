@@ -18,17 +18,20 @@ import { getOneProject } from 'src/store/middleware';
 
 // State
 const mapStateToProps = (state) => {
-  const {
+  // eslint-disable-next-line max-len
+  const { isFetching, label, logo, description, stack, url, source, imgPresentation, images } = state.project;
+
+  return {
     isFetching,
     label,
     logo,
     description,
     stack,
     url,
+    source,
     imgPresentation,
-    images } = state.project;
-
-  return { isFetching, label, logo, description, stack, url, imgPresentation, images };
+    images,
+  };
 };
 
 // Actions

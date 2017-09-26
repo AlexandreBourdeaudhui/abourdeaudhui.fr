@@ -65,6 +65,6 @@ export default (request, response) => {
   }).then(() => {
     response.status(200).json({ message: 'Votre message a bien été envoyé.' });
   }).catch((error) => {
-    response.status(404).json({ error });
+    response.status(400).json({ error });
   });
 };

@@ -29,6 +29,7 @@ class Project extends Component {
     description: PropTypes.string.isRequired,
     stack: PropTypes.string.isRequired,
     url: PropTypes.string.isRequired,
+    source: PropTypes.string.isRequired,
     imgPresentation: PropTypes.string.isRequired,
     images: PropTypes.arrayOf(PropTypes.object.isRequired).isRequired,
   }
@@ -52,6 +53,7 @@ class Project extends Component {
       description,
       stack,
       url,
+      source,
       imgPresentation,
       images,
       isFetching } = this.props;
@@ -98,13 +100,23 @@ class Project extends Component {
             {/* Stack */}
             <Description title="Environnement technique utilisé" text={stack} />
 
-            {url !== '' &&
-              <a id="project-prez-visite" href={url}>
+            <div id="project-prez-visite">
+
+              {url !== '' &&
+              <a href={url}>
                 Visiter ce site !
               </a>
-            }
+              }
+
+              {source !== '' &&
+              <a href={source}>
+                Voir le code source
+              </a>
+              }
+            </div>
 
             {/* Go to Screen */}
+            {images.length > 0 &&
             <Link
               delay={250}
               duration={1250}
@@ -116,6 +128,7 @@ class Project extends Component {
               <span id="project-prez-button-puce" />
               Voir les visuels
             </Link>
+            }
           </div>
 
 
@@ -131,7 +144,7 @@ class Project extends Component {
 
 
         {/* Second party */}
-        <Screen images={images} label={label} />
+        {images.length > 0 && <Screen images={images} label={label} />}
       </div>
     );
   }

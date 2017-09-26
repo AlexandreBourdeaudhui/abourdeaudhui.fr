@@ -14,6 +14,7 @@ const initialState = {
   description: '',
   stack: '',
   url: '',
+  source: '',
   imgPresentation: '',
   images: [],
 

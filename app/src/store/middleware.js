@@ -69,6 +69,8 @@ const createMiddleware = store => next => (action) => {
         const { form } = store.getState();
         const { name, email, phone, object, message } = form;
 
+        store.dispatch(setMessageSuccess(''));
+
         axios({
           method: 'POST',
           url: `${BASE_URL}/form/send`,
