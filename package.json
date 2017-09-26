@@ -11,7 +11,7 @@
   "scripts": {
     "front": "brunch w -s",
     "start": "brunch watch & nodemon api/index.js --exec babel-node",
-    "build": "brunch build --production",
+    "build": "brunch build --production & babel api -d build",
     "lint": "eslint .",
     "lint:fix": "eslint --fix app api"
   },

@@ -9,6 +9,7 @@ node_modules/
 
 # Public Folder
 public/
+build/
 
 # Log error
 npm-debug.log
