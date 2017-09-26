@@ -46,7 +46,7 @@ const fields = [
 ];
 
 
-const Form = ({ actions, message, error }) => {
+const Form = ({ resultSuccess, resultError, message, error, actions }) => {
   /*
    * Actions
    */
@@ -66,10 +66,8 @@ const Form = ({ actions, message, error }) => {
      */
   return (
     <form id="form" onSubmit={onSubmit}>
+      <h2 className="contact-bloc-title">Envoyez-moi un message</h2>
 
-      <h2 className="contact-bloc-title">
-        Envoyez-moi un message
-      </h2>
       <p id="form-desc">* Champs obligatoires</p>
 
       <div id="form-field">
@@ -82,30 +80,35 @@ const Form = ({ actions, message, error }) => {
         ))}
       </div>
 
-      <div className={
-        classNames('form-field',
-          { 'form-field--has-value': message },
-          { 'form-field--has-error': error },
-        )}
+      <div className={classNames('form-field',
+        { 'form-field--has-value': message },
+        { 'form-field--has-error': error },
+      )}
       >
         <textarea
-          // HTML
           name="message"
           placeholder="Votre message *"
-
-          // React
           onChange={onChange}
           value={message}
         />
 
-        <label htmlFor="message">
-          Votre message *
-        </label>
+        <label htmlFor="message">Votre message *</label>
       </div>
 
-      <button id="form-submit">
-        Envoyer votre message
-      </button>
+      <button id="form-submit">Envoyer votre message</button>
+
+      {resultSuccess &&
+        <span className="result result--success">
+          {resultSuccess}
+        </span>
+      }
+
+      {resultError &&
+        resultError.map(messageError => (
+          <span key={messageError} className="result result--error">
+            {messageError}
+          </span>
+        ))}
     </form>
   );
 };
@@ -115,11 +118,9 @@ const Form = ({ actions, message, error }) => {
  * PropTypes
  */
 Form.propTypes = {
-  actions: PropTypes.objectOf(
-    PropTypes.func.isRequired,
-  ).isRequired,
   message: PropTypes.string.isRequired,
   error: PropTypes.bool.isRequired,
+  actions: PropTypes.objectOf(PropTypes.func.isRequired).isRequired,
 };
 
 

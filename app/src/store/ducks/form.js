@@ -2,7 +2,17 @@
  * Local Import
  */
 // Types
-import { HANDLE_INPUT_CHANGE } from '../types';
+import {
+  // Ajax
+  SET_MESSAGE_SUCCESS,
+  SET_MESSAGES_ERROR,
+
+  // State
+  RESET_STATE_FORM,
+
+  // Actions
+  HANDLE_INPUT_CHANGE,
+} from '../types';
 
 
 /*
@@ -16,6 +26,10 @@ const initialState = {
   object: '',
   message: '',
 
+  // Results
+  resultSuccess: '',
+  resultError: '',
+
   // Error
   error: false,
 };
@@ -26,9 +40,24 @@ const initialState = {
  */
 export default (state = initialState, action = {}) => {
   switch (action.type) {
-    /*
-     * Handle Input Change
-     */
+    // Ajax
+    case SET_MESSAGE_SUCCESS:
+      return {
+        ...state,
+        resultSuccess: action.message,
+      };
+
+    case SET_MESSAGES_ERROR:
+      return {
+        ...state,
+        resultError: action.messages,
+      };
+
+    // State
+    case RESET_STATE_FORM:
+      return initialState;
+
+    // Actions
     case HANDLE_INPUT_CHANGE:
       return {
         ...state,
@@ -54,6 +83,21 @@ export const handleInputChange = () => (name, value) => ({
   name,
   value,
 });
+
+export const resetStateQuiz = () => ({
+  type: RESET_STATE_FORM,
+});
+
+export const setMessageSuccess = message => ({
+  type: SET_MESSAGE_SUCCESS,
+  message,
+});
+
+export const setMessagesError = messages => ({
+  type: SET_MESSAGES_ERROR,
+  messages,
+});
+
 
 /*
  * Selectors

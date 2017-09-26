@@ -11,6 +11,7 @@ import axios from 'axios';
 // Action @ Reducer
 import { setAllProjects } from './ducks/portfolio';
 import { setOneProject } from './ducks/project';
+import { resetStateQuiz, setMessageSuccess, setMessagesError } from './ducks/form';
 
 // Utils
 import { normalizeDatas } from '../utils';
@@ -22,7 +23,8 @@ import { GET_ALL_PROJECTS, GET_ONE_PROJECT, SEND_MESSAGE } from './types';
 /*
  * Variable
  */
-const BASE_URL = 'http://localhost:3005/v1';
+const BASE_URL = '/v1';
+// const BASE_URL = 'http://localhost:3005/v1';
 // const BASE_URL = 'http://abourdeaudhui.fr:3005/v1';
 
 
@@ -73,10 +75,11 @@ const createMiddleware = store => next => (action) => {
           data: { name, email, phone, object, message },
         })
           .then(({ data }) => {
-            console.log(data);
+            store.dispatch(resetStateQuiz());
+            store.dispatch(setMessageSuccess(data.message));
           })
           .catch(({ response }) => {
-            console.log(response.data.error);
+            store.dispatch(setMessagesError(response.data.error));
           });
       }
       break;

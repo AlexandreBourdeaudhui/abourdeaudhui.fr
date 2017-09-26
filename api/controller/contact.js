@@ -47,7 +47,7 @@ export default (request, response) => {
       subject: object,
       text: `
         De ${name},
-        email : ${email},
+        email: ${email},
         téléphone: ${phone}.
         Message: ${message}`,
     };
@@ -62,8 +62,8 @@ export default (request, response) => {
         return resolve(info);
       });
     });
-  }).then((info) => {
-    response.status(200).json({ info });
+  }).then(() => {
+    response.status(200).json({ message: 'Votre message a bien été envoyé.' });
   }).catch((error) => {
     response.status(404).json({ error });
   });

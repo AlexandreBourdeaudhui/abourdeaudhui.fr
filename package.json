@@ -60,9 +60,6 @@
     "sass-brunch": "^2.10.4",
     "uglify-js-brunch": "^2.10.0"
   },
-  "keywords": [
-    "Alexandre",
-    "Bourdeaudhui"
-  ],
-  "description": ""
+  "keywords": ["Alexandre", "Bourdeaudhui"],
+  "description": "Code source of website http://abourdeaudhui.fr"
 }

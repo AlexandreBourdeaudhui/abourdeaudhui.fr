@@ -159,6 +159,21 @@
   }
 }
 
+.result {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 0.85em;
+  font-weight: 400;
+  padding: 0.25em 0;
+  text-align: center;
+  &--success {
+    color: $successColor
+  }
+  &--error {
+    color: $errorColor;
+  }
+}
+
+
 /*
  * Media Queries
  */

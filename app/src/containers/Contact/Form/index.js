@@ -25,6 +25,8 @@ import { sendMessage } from 'src/store/middleware';
 const mapStateToProps = state => ({
   message: state.form.message,
   error: state.form.error,
+  resultSuccess: state.form.resultSuccess,
+  resultError: state.form.resultError,
 });
 
 // Actions
