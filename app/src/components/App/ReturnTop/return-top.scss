@@ -1,0 +1,25 @@
+#return-top {
+  border-radius: 20px;
+  background: rgba(0, 0, 0, .25);
+  box-shadow: 0 0 6px 0 rgba(0, 0, 0, .3);
+  bottom: 0.75em;
+  cursor: pointer;
+  display: none;
+  padding: 0.5em;
+  position: fixed;
+  right: 0.75em;
+  transition: all .5s;
+  z-index: 6;
+  &::before {
+    background: url("/images/rocket.png") no-repeat;
+    background-size: contain;
+    content: '';
+    display: block;
+    height: 25px;
+    transform: rotate(317deg);
+    width: 25px;
+  }
+  &:hover {
+    background: rgba(#FFF, .5);
+  }
+}

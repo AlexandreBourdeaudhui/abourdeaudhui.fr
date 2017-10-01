@@ -101,18 +101,8 @@ class Project extends Component {
             <Description title="Environnement technique utilisé" text={stack} />
 
             <div id="project-prez-visite">
-
-              {url !== '' &&
-              <a href={url}>
-                Visiter ce site !
-              </a>
-              }
-
-              {source !== '' &&
-              <a href={source}>
-                Voir le code source
-              </a>
-              }
+              {url.length > 0 && <a href={url}> Visiter ce site </a>}
+              {source.length > 0 && <a href={source}> Voir le code source </a>}
             </div>
 
             {/* Go to Screen */}

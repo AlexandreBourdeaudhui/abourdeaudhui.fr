@@ -33,31 +33,6 @@
   }
 }
 
-#return-top {
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
-  background: rgba(0, 0, 0, .25);
-  bottom: 0;
-  cursor: pointer;
-  display: none;
-  padding: 0.5em;
-  position: fixed;
-  right: 0.75em;
-  z-index: 6;
-  &::before {
-    background: url("/images/rocket.png");
-    background-size: contain;
-    content: '';
-    display: block;
-    height: 25px;
-    transform: rotate(317deg);
-    width: 25px;
-  }
-  &:hover {
-    background: rgba(#FFF, .5);
-  }
-}
-
 
 /*
  * ClassNames

@@ -11,11 +11,12 @@ import { Switch, Route } from 'react-router-dom';
 import routes from 'src/routes';
 import Header from 'src/components/Header';
 import Footer from 'src/components/Footer';
+
 import ReturnTop from './ReturnTop';
 
 
 /*
- * Code
+ * Component
  */
 const App = () => (
   <div id="app">

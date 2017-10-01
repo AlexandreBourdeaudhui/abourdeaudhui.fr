@@ -6,7 +6,7 @@
     "logo":"/images/project/sitePersonnel/logo.png",
     "imgPresentation":"/images/project/sitePersonnel/1.jpg",
     "description":"Dans l'optique de mettre en pratique ce que j'ai appris tout au long de la formation, mais également dans le besoin d'exprimer le travail que j'ai pu accomplir aux travers de mes projets, à de futurs recruteurs. J'ai donc décidé de créer ce site, avec un portfolio. J'ai développer ce site tout en gardant en tête que je devais respecter au maximum les bonnes pratiques <a href=\"https://www.opquast.com/\">Opquast</a> afin qu'il soit accessible par tous.",
-    "stack":"Pour développer ce site, j'ai manipuler la partie Front avec <strong>React</strong>, <strong>React-Router</strong>, ainsi que <strong>Sass</strong>. J'ai également utilisé une partie Back, notamment pour une vérification de la saisie du formulaire de contact, mais également pour le routeur. J'ai donc eu recour à <strong>Node</strong>, et <strong>Express</strong>. Enfin, en ce qui concerne les outils exploité pour le bon déroulement de ce développement, j'ai notamment travaillé avec <strong>Brunch.io</strong>, <strong>Yarn</strong>, <strong>Axios</strong>, <strong>ESLint</strong> et son extension de configuration <strong>Airbnb</strong>.",
+    "stack":"Pour développer ce site, j'ai utilisé comme environnement technique, les technologies suivantes : la partie front-end avec <strong>React.js</strong>, <strong>React-Router</strong>, ainsi que <strong>Sass</strong>. J'ai également utilisé une partie back-end, notamment pour une vérification de la saisie du formulaire de contact, mais également pour le <strong>Routeur</strong>. J'ai donc utilisé <strong>Node.js</strong>, et <strong>Express</strong>. Enfin, en ce qui concerne les outils exploités pour le bon déroulement de ce développement, j'ai travaillé avec <strong>Brunch.io</strong>, <strong>Yarn</strong>, <strong>Axios</strong>, <strong>Eslint</strong> et son extension de configuration <strong>Airbnb</strong>.",
     "url":"http://abourdeaudhui.fr",
     "source":"https://github.com/AlexandreBourdeaudhui/abourdeaudhui.fr",
     "images": []
@@ -17,8 +17,8 @@
     "label":"O'Quiz",
     "logo":"/images/project/oQuiz/logo.svg",
     "imgPresentation":"/images/project/oQuiz/1.jpg",
-    "description":"Dans le cadre de la formation <a href=\"https://oclock.io/\">O'clock</a>. J'ai dû réaliser avec trois collègues un projet de fin d'étude, afin de mettre en pratique tout ce qu'on a vu. O'Quiz est <strong>une application de Quiz</strong> qui va être destiné dans un premier temps aux étudiants des prochaines promotions. Cette application va leur permettre de réviser les notions vues dans la journée de façon simple et ludique. <strong>Ma tâche</strong> sur cette application a été de développer <strong>une partie du Back-end</strong>, mais également une bonne partie du <strong>Front-end</strong>, conformément aux spécifications du cahier des charges et des maquettes graphiques.",
-    "stack":"Nous avons utilisés pour ce projet les technologies suivantes : pour la partie Front <strong>React</strong>, <strong>Redux</strong>, <strong>React-Router</strong> ainsi que <strong>Stylus</strong>. Aussi, pour le Back nous avons utilisés <strong>Node</strong>, <strong>Express</strong>, mais également <strong>Passport</strong> avec les <strong>JWT</strong> (JSON Web Token) pour l'authentification. Pour la persistance des données, nous avons choisi d'utiliser <strong>MySQL</strong> en base de données. En effet, nous nous sommes aperçu au moment de la rédaction des spécifications fonctionnelles, que nous allions avoir besoin d'une base de données relationnelle. Nous avons également mis en place des tests unitaires dans notre application, à l'aide de <strong>Mocha</strong>, <strong>Chai</strong>, et <strong>Enzime</strong>. Enfin, en ce qui concerne les outils utilisés, nous avons notamment travaillé avec <strong>Brunch.io</strong>, <strong>Yarn</strong>, <strong>Axios</strong>, <strong>ESLint</strong> et son extension de configuration <strong>Airbnb</strong>.",
+    "description":"Dans le cadre de la formation <a href=\"https://oclock.io/\">O'clock</a>. J'ai dû réaliser avec trois collègues un projet de fin d'étude, afin de mettre en pratique tout ce qu'on a vu. O'Quiz est <strong>une application de Quiz</strong> qui va être destiné dans un premier temps aux étudiants des prochaines promotions. Cette application va leur permettre de réviser les notions vues dans la journée de façon simple et ludique. <strong>Ma tâche</strong> sur cette application a été de développer <strong>une partie du back-end</strong>, mais également une bonne partie du <strong>Front-end</strong>, conformément aux spécifications du cahier des charges et des maquettes graphiques.",
+    "stack":"Nous avons utilisés pour ce projet les technologies suivantes : pour la partie front-end <strong>React.js</strong>, <strong>Redux</strong>, <strong>React-Router</strong> ainsi que <strong>Stylus</strong>. Aussi, pour le back-end nous avons utilisés <strong>Node.js</strong>, <strong>Express</strong>, mais également <strong>Passport</strong> avec les <strong>JWT</strong> (JSON Web Token) pour l'authentification. Pour la persistance des données, nous avons choisi d'utiliser <strong>MySQL</strong> en base de données. En effet, nous nous sommes aperçu au moment de la rédaction des spécifications fonctionnelles, que nous allions avoir besoin d'une base de données relationnelle. Nous avons également mis en place des tests unitaires dans notre application, à l'aide de <strong>Mocha</strong>, <strong>Chai</strong>, et <strong>Enzime</strong>. Enfin, en ce qui concerne les outils utilisés, nous avons notamment travaillé avec <strong>Brunch.io</strong>, <strong>Yarn</strong>, <strong>Axios</strong>, <strong>ESLint</strong> et son extension de configuration <strong>Airbnb</strong>.",
     "url":"",
     "source": "",
     "images": [
@@ -42,8 +42,8 @@
     "label":"Love App",
     "logo":"/images/project/loveApp/logo.png",
     "imgPresentation":"/images/project/loveApp/1.jpg",
-    "description":"Dans l'optique de réaliser un projet personnel avec des amis qui souhaitaient se mettre à niveau sur <strong>React</strong>, mais également sur <strong>Node</strong>. Nous avons alors développé <strong>Love App</strong> qui est une application de rencontre, et de discussion instantanée. Le principe est qu'à partir du moment où vous « <strong>matchez</strong> » avec une personne, cela vous donne la possibilité de discuter avec.",
-    "stack":"Pour ce projet nous avons utilisés comme environnement technique, les technologies suivantes : Pour le Front, nous avons utilisés <strong>React</strong>, <strong>Redux</strong>, <strong>React-Router</strong>, et <strong>Sass</strong>. Pour la partie Back, nous avons utilisés <strong>Node</strong>, <strong>Express</strong>, mais également <strong>Passport</strong> avec les <strong>JWT</strong> (JSON Web Token) pour l'authentification. Pour la persistance des données, nous avons choisi d'utiliser <strong>MongoDB</strong> en base de données. Enfin, nous avons utilisé <strong>Webpack</strong>, <strong>NPM</strong>, <strong>Axios</strong>, <strong>ESLint</strong> et son extension de configuration <strong>Airbnb</strong> comme outils pour créer cette application.",
+    "description":"Dans l'optique de réaliser un projet personnel avec <strong>React.js</strong>, et <strong>Node.js</strong>. J'ai développé <strong>Love App</strong> qui est une application de rencontre, et de discussion instantanée. Le principe est qu'à partir du moment où vous « <strong>matchez</strong> » avec une personne, cela vous donne la possibilité de discuter avec.",
+    "stack":"Pour ce projet j'ai utilisé comme environnement technique, les technologies suivantes : Pour le front-end, <strong>React.js</strong>, <strong>Redux</strong>, <strong>React-Router</strong>, et <strong>Sass</strong>. Pour la partie back-end : <strong>Node</strong>, <strong>Express</strong>, mais également <strong>Passport.js</strong> avec l'authentification par  <strong>JWT</strong> (JSON Web Token). Pour la persistance des données, j'ai choisi d'utiliser <strong>MongoDB</strong> en base de données. Enfin, nous avons utilisé <strong>Webpack</strong>, <strong>NPM</strong>, <strong>Axios</strong>, <strong>ESLint</strong> et son extension de configuration <strong>Airbnb</strong> comme outils pour créer cette application.",
     "url":"",
     "source": "",
     "images": [
@@ -56,5 +56,30 @@
           "url":"/images/project/loveApp/loveApp2.png"
        }
     ]
+ },
+ {
+   "id": 4,
+   "slug": "aviva",
+   "label": "Classement Aviva",
+   "logo":"/images/project/aviva/logo.jpg",
+   "imgPresentation": "/images/project/aviva/1.jpeg",
+   "description": "Suite au concours « La Fabrique Aviva » durant lequel participait l'école O'clock. J'ai développé avec un collègue de la formation, un classement non officiel. Et grace à ce dernier nous avons pu suivre pratiquement en temps réel l'avancement de chacun jusqu'à la fin du concours. Ce classement n'a pas servi seulement à O'clock, puisqu'on avait environs 150 visiteurs unique par jour.",
+   "stack": "En prenant en compte un facteur important par rapport au concours, <strong>le temps</strong>. Nous avons utilisé <strong>Twitter Bootstrap</strong> pour le style, <strong>Fancybox</strong> pour les modales, et <strong>Dygraph</strong> pour les graphiques. Pour tout ce qui de la partie back-end, nous avons utilisé <strong>PHP</strong>",
+   "url": "http://aviva.oclock.io/",
+   "source": "",
+   "images": [
+      {
+         "id":1,
+         "url":"/images/project/aviva/aviva1.png"
+      },
+      {
+         "id":2,
+         "url":"/images/project/aviva/aviva2.png"
+      },
+      {
+         "id":3,
+         "url":"/images/project/aviva/aviva3.png"
+      }
+   ]
  }
 ]

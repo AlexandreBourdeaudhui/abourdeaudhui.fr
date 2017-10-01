@@ -5,7 +5,7 @@ export const home = [
   {
     id: 1,
     title: 'À propos de moi',
-    description: 'Je m\'appelle <strong>Alexandre Bourdeaud\'hui</strong>, j\'ai 25 ans. Je suis de la région <strong>Lilloise</strong> mais j\'ai une mobilité sur la France entière. Je développe avec <strong>Javascript</strong> que j\'utilise principalement côté Front via sa library <strong>React</strong>. Mais également côté Back notamment avec <strong>Node</strong>.',
+    description: 'Je m\'appelle <strong>Alexandre Bourdeaud\'hui</strong>, j\'ai 25 ans. Je suis de la région <strong>Lilloise</strong> mais j\'ai une mobilité sur la France entière. Je développe avec <strong>Javascript</strong> que j\'utilise principalement côté Front via sa library <strong>React.js</strong>. Mais également côté Back notamment avec <strong>Node.js</strong>.',
   },
   {
     id: 2,
@@ -29,14 +29,14 @@ export const skills = [
     image: '/images/skill/icon-web.svg',
     title: 'Développement front-end',
     description: 'L\'expérience utilisateur est ma priorité lorsque je développe un site ou une application web. Pour cela, à partir de cahier des charges et/ou de maquettes graphique... Je développe des interfaces utilisateurs qui ont été pensées et réfléchies pour être agréable et ludique visuellement. Je fais également en sorte, qu\'elles soient adaptées aux dernières « modes », comme le responsive design. En effet, je suis conscient que plus de la moitié des consultations de site internet se font sur mobile. C\'est donc dans ce sens que je développe avant tout.',
-    tags: ['HTML/CSS', 'Javascript', 'Sass', 'Stylus', 'React', 'Redux'],
+    tags: ['HTML/CSS', 'Javascript', 'Sass', 'Stylus', 'React.js', 'Redux'],
   },
   {
     id: 2,
     image: '/images/skill/server.svg',
     title: 'Développement back-end',
     description: 'Donner vie à votre site internet ou à votre application, c\'est le cœur de mon métier. Pour cela, je mets à votre disposition mes compétentes en gestion de base de données. En utilisant différentes technologies telles que MySQL, mais également MongoDB. Même si je suis spécialisé en front-end, je peux allier sans soucis la partie back-end et le front-end d\'une application en utilisant Ajax Afin de vous créer une application dynamique et fonctionnelle.',
-    tags: ['NodeJS', 'MongoDB', 'MySQL', 'PHP', 'API'],
+    tags: ['Node.js', 'MongoDB', 'MySQL', 'PHP', 'API'],
   },
   {
     id: 3,

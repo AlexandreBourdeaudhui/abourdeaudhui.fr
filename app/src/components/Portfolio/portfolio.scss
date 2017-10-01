@@ -59,12 +59,11 @@
     box-shadow: 0 0 3px #CCC;
     display: flex;
     justify-content: center;
+    margin: 0 0.25em;
     min-height: 150px;
     min-width: 225px;
-    padding: 1em;
     position: relative;
     &-image {
-      max-width: 150px;
       height: 115px;
     }
   }
